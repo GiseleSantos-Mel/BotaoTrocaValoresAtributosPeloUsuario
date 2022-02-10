@@ -1,0 +1,65 @@
+({
+	pegaConta : function(component) {
+		var AcaoTOP = component.get("c.pegaTop10Clientes");
+       
+        AcaoTOP.setCallback(this,function(response){
+            console.log('response-',response);
+            
+            // state > SUCESSO
+            var state = response.getState();
+            // CONDICAO
+            if(state == "SUCCESS"){
+                var result = response.getReturnValue();
+                console.log('resposta do Apex com mais-'+result);
+                console.log('resposta do Apex com virgula -',result);
+                component.set("v.regConta", result);    
+            }else{
+                alert('Tente Novamente mais tarde');
+            }
+        });	
+        
+        $A.enqueueAction(AcaoTOP); 
+	},
+    pegaLead : function(component) {
+		var AcaoTOP = component.get("c.pegaTop10Clientes");
+       
+        AcaoTOP.setCallback(this,function(response){
+            console.log('response-',response);
+            
+            // state > SUCESSO
+            var state = response.getState();
+            // CONDICAO
+            if(state == "SUCCESS"){
+                var result = response.getReturnValue();
+                console.log('resposta do Apex com mais-'+result);
+                console.log('resposta do Apex com virgula -',result);
+                component.set("v.regConta", result);    
+            }else{
+                alert('Tente Novamente mais tarde');
+            }
+        });	
+        
+        $A.enqueueAction(AcaoTOP); 
+	},
+    pegaOpp : function(component) {
+		var AcaoTOP = component.get("c.pegaTop10Clientes");
+       
+        AcaoTOP.setCallback(this,function(response){
+            console.log('response-',response);
+            
+            // state > SUCESSO
+            var state = response.getState();
+            // CONDICAO
+            if(state == "SUCCESS"){
+                var result = response.getReturnValue();
+                console.log('resposta do Apex com mais-'+result);
+                console.log('resposta do Apex com virgula -',result);
+                component.set("v.regConta", result);    
+            }else{
+                alert('Tente Novamente mais tarde');
+            }
+        });	
+        
+        $A.enqueueAction(AcaoTOP); 
+	}
+})

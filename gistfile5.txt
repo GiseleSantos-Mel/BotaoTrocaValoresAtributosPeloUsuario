@@ -1,0 +1,7 @@
+.THIS.divShow{
+    font-size:20px; 
+}
+
+.THIS.divSemiShow{
+    font-size:30px;
+}

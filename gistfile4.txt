@@ -1,0 +1,16 @@
+<design:component>
+     
+	<design:attribute name="nomeDoBotao" label="Nome Do Botao" />
+    
+    <design:attribute name="tamanhoDafonte" label="Tamanho da Fonte" />
+    
+    <!-- 
+		name == Atributo
+		Label == Rotulo que será mostrado ao usuário
+	 -->
+    <design:attribute name="corDoFundo" label="Cor do Fundo" />
+    
+    <design:attribute name="corTexto" label="Cor do Texto" />
+    
+    <design:attribute name="visivel" label="Visivel" />
+</design:component>

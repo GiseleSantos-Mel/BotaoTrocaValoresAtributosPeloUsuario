@@ -1,0 +1,29 @@
+<aura:component controller="TabelaShowController" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="regConta" type="Object" />
+    
+    <aura:attribute name="tamanhoDafonte" type="Integer" default="20"	/>
+    <aura:attribute name="corDoFundo"   type="String"  default="white"	/>
+    <aura:attribute name="imagemURL"    type="String"  default="https://s3.static.brasilescola.uol.com.br/be/2020/12/girassol.jpg" />
+    <aura:attribute name="nomeDoBotao"  type="String"  default="Clique aqui"	/>
+    <aura:attribute name="corTexto" 	type="String" default="black"	/>
+    <aura:attribute name="visivel" 		type="Boolean" default="true"	/>
+    <!-- INICIALIZACAO DO COMPONENTE --> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+   	
+    <!--
+		1. Criar um Atributo
+  		2. Mesclar com o Aura/HTML
+		3. Criar os Parametros no DESIGN
+	 -->
+  	<div style="{!'background-color:'+v.corDoFundo}">
+        <p style="{!'font-size:' + v.tamanhoDafonte + 'px; color:' + v.corTexto}">
+                Oh, meu amor!
+                Não fique triste...
+                Saudade existe pra quem sabe ter,
+                Minha vida cigana me afastou de você,
+                Por algum tempo eu vou ter que viver por aí, longe de você,
+                Longe do seu carinho...
+        </p>
+    </div>
+    <lightning:button variant="brand" label="{!v.nomeDoBotao}" title="{!v.nomeDoBotao}" onclick="{! c.mudaCss }" />
+</aura:component>

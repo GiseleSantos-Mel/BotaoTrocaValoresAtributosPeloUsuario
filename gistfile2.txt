@@ -1,0 +1,13 @@
+({
+	doInit : function(component, event, helper){
+		helper.pegaConta(component); 
+        helper.pegaLead(component); 
+        helper.pegaOpp(component); 
+    },
+        
+    mudaCss : function(component, event, helper){
+        var cmpTarget = component.find('MinhaDivLinda');
+        $A.util.toggleClass(cmpTarget, 'divSemiShow');
+        
+    }
+})
